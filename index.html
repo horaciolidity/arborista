@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>ORTIZ Arborista: Expertos en Poda y Jardinería en Altura</title>
+    <title>ORTIZ Arborista: Expertos en Poda y Jardinería en Altura</title>
 
     <style>
         body {
@@ -16,55 +16,53 @@
             line-height: 1.6;
         }
 
-    header {
-    position: relative;
-    color: white;
-    padding: 20px;
-    text-align: center;
-    background-color: #4CAF50;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    overflow: hidden; /* Asegura que el video no se salga del contenedor */
-}
-
-#background-video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    z-index: -1;
-    background-size: cover;
-    filter: brightness(0.5); /* Ajusta el brillo del video para asegurar la legibilidad del texto */
-}
-
-header h1, header p {
-    position: relative;
-    z-index: 2;
-}
-
-  header::after {
-            content: '';
-            display: block;
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.5);
-            z-index: 1;
+        header {
+            color: white;
+            padding: 20px;
+            text-align: center;
+            background-color: #4CAF50;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
-      
 
-      
+        header h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            margin: 0;
+            letter-spacing: 1px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
 
-     
+        header p {
+            font-size: 1.5rem;
+            margin: 10px 0 0;
+            font-weight: 300;
+            color: #f0f0f0;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
 
         .container {
             padding: 40px 20px;
             max-width: 1200px;
             margin: auto;
+        }
+
+        .video-container {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .video-container video {
+            width: 48%;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .video-legend {
+            text-align: center;
+            font-size: 1.2rem;
+            color: #4CAF50;
+            margin-top: 10px;
         }
 
         .services {
@@ -160,19 +158,25 @@ header h1, header p {
 
 <body>
     <header>
-        <video autoplay muted loop id="background-video">
-        <source src="https://ortiz-arborista.vercel.app/video2.mp4" type="video/mp4">
-        Tu navegador no soporta videos en HTML5.
-    </video>
-          <h1 style="font-size: 3rem; font-weight: bold; margin: 0; letter-spacing: 1px; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); position: relative; z-index: 2;">
-        ORTIZ Arborista
-    </h1>
-    <p style="font-size: 1.5rem; margin: 10px 0 0; font-weight: 300; color: #f0f0f0; position: relative; z-index: 2; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);">
-        Expertos en Poda y Jardinería en Altura
-    </p>
+        <h1>ORTIZ Arborista</h1>
+        <p>Expertos en Poda y Jardinería en Altura</p>
     </header>
 
     <div class="container">
+        <div class="video-container">
+            <video controls>
+                <source src="https://ortiz-arborista.vercel.app/video1.mp4" type="video/mp4">
+                Tu navegador no soporta videos en HTML5.
+            </video>
+            <video controls>
+                <source src="https://ortiz-arborista.vercel.app/video2.mp4" type="video/mp4">
+                Tu navegador no soporta videos en HTML5.
+            </video>
+        </div>
+        <div class="video-legend">
+            <p>Observa cómo realizamos podas y mantenimiento de jardines con la máxima seguridad y profesionalismo.</p>
+        </div>
+
         <section class="services">
             <div class="service-item">
                 <img src="https://ortiz-arborista.vercel.app/foto1.jfif" alt="Poda en Altura">
