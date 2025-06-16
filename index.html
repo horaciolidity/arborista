@@ -3,167 +3,269 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Meta Básicos -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ORTIZ AGUERO - Poda en Altura en Luján de Cuyo, Mendoza</title>
+<meta name="description" content="Empresa profesional de poda en altura, tala controlada y mantenimiento de árboles en Luján de Cuyo, Mendoza. Atención rápida y segura.">
+
+<!-- SEO Local -->
+<meta name="geo.region" content="AR-M"> <!-- Mendoza, Argentina -->
+<meta name="geo.placename" content="Luján de Cuyo, Mendoza, Argentina">
+<meta name="geo.position" content="-33.0416;-68.8758">
+<meta name="ICBM" content="-33.0416, -68.8758">
+
+<!-- Open Graph (para compartir en redes) -->
+<meta property="og:title" content="ORTIZ AGUERO - Poda en Altura en Mendoza">
+<meta property="og:description" content="Expertos en poda en altura, tala controlada y mantenimiento de árboles en Mendoza. Servicio seguro y profesional.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.ortizaguero.com"> <!-- Reemplazá con tu dominio real -->
+<meta property="og:image" content="https://www.ortizaguero.com/img/banner.jpg"> <!-- Opcional: imagen para redes -->
+
+<!-- Favicon -->
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
+
   <title>ORTIZ AGUERO - Poda en altura</title>
+  
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
     :root {
-      --primary: #2e7d32;
-      --accent: #66bb6a;
-      --bg-light: #f1f8e9;
-      --text-dark: #212121;
-      --card-bg: #ffffff;
-    }
+  --primary: #2e7d32;
+  --accent: #ffa726; /* naranja suave */
+  --secondary: #7e57c2; /* violeta */
+  --bg-light: #fefae0; /* crema */
+  --text-dark: #1e1e1e;
+  --card-bg: #ffffff;
+  --gradient: linear-gradient(135deg, #7e57c2, #ffa726, #66bb6a);
+}
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background-color: var(--bg-light);
-      color: var(--text-dark);
-      line-height: 1.6;
-    }
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--bg-light);
+  color: var(--text-dark);
+  line-height: 1.7;
+  scroll-behavior: smooth;
+}
 
-    header {
-      background: linear-gradient(135deg, var(--primary), #1b5e20);
-      color: white;
-      padding: 80px 20px 60px;
-      text-align: center;
-      clip-path: ellipse(150% 100% at 50% 0%);
-    }
+header {
+  background: var(--gradient);
+  color: white;
+  padding: 100px 20px 70px;
+  text-align: center;
+  clip-path: ellipse(150% 100% at 50% 0%);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 1.5s ease;
+}
 
-    header h1 {
-      font-size: 3.5em;
-      margin-bottom: 10px;
-    }
+header h1 {
+  font-size: 3.8em;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
 
-    header p {
-      font-size: 1.2em;
-      font-style: italic;
-    }
+header p {
+  font-size: 1.3em;
+  font-style: italic;
+  opacity: 0.95;
+}
 
-    nav {
-      background: white;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      padding: 15px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
+nav {
+  background: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 15px 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
 
-    nav a {
-      color: var(--primary);
-      margin: 8px 15px;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 1em;
-      transition: color 0.3s;
-    }
+nav a {
+  color: var(--primary);
+  margin: 8px 20px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.05em;
+  transition: all 0.3s ease;
+  position: relative;
+}
 
-    nav a:hover {
-      color: var(--accent);
-    }
+nav a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -3px;
+  left: 0;
+  background-color: var(--accent);
+  transition: width 0.3s;
+}
 
-    section {
-      padding: 60px 20px;
-      max-width: 1200px;
-      margin: auto;
-    }
+nav a:hover::after {
+  width: 100%;
+}
 
-    h2 {
-      text-align: center;
-      color: var(--primary);
-      margin-bottom: 30px;
-      font-size: 2em;
-    }
+nav a:hover {
+  color: var(--secondary);
+}
 
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
+section {
+  padding: 70px 20px;
+  max-width: 1200px;
+  margin: auto;
+  animation: fadeInUp 0.8s ease;
+}
 
-    .card {
-      background: var(--card-bg);
-      border-radius: 12px;
-      padding: 20px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      transition: transform 0.3s;
-    }
+h2 {
+  text-align: center;
+  color: var(--primary);
+  margin-bottom: 40px;
+  font-size: 2.2em;
+  position: relative;
+}
 
-    .card:hover {
-      transform: translateY(-5px);
-    }
+h2::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: var(--accent);
+  margin: 10px auto 0;
+  border-radius: 5px;
+}
 
-    .gallery-item img {
-      width: 100%;
-      height: 180px;
-      border-radius: 10px;
-      object-fit: cover;
-    }
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+}
 
-    footer {
-      background: #1b5e20;
-      color: white;
-      text-align: center;
-      padding: 30px 15px;
-      font-size: 0.9em;
-    }
+.card {
+  background: var(--card-bg);
+  border-radius: 16px;
+  padding: 25px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
 
-    .whatsapp-float {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: #25D366;
-      color: white;
-      border-radius: 50%;
-      width: 60px;
-      height: 60px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 28px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-      z-index: 999;
-    }
+.card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+}
 
-    .testimonial {
-      font-style: italic;
-      font-size: 0.95em;
-      padding: 15px;
-      border-left: 4px solid var(--accent);
-    }
+.gallery-item img {
+  width: 100%;
+  height: 200px;
+  border-radius: 10px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
 
-    form textarea, form input {
-      width: 100%;
-      padding: 12px;
-      margin-top: 10px;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-    }
+.gallery-item img:hover {
+  transform: scale(1.03);
+}
 
-    form button {
-      margin-top: 10px;
-      background: var(--primary);
-      color: white;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      font-weight: bold;
-    }
+footer {
+  background: var(--primary);
+  color: white;
+  text-align: center;
+  padding: 35px 20px;
+  font-size: 0.95em;
+  margin-top: 60px;
+}
 
-    .social-icons a {
-      color: white;
-      margin: 0 10px;
-      font-size: 1.2em;
-    }
+footer p {
+  margin-bottom: 10px;
+}
+
+.social-icons a {
+  color: white;
+  margin: 0 12px;
+  font-size: 1.4em;
+  transition: transform 0.3s;
+}
+
+.social-icons a:hover {
+  transform: scale(1.2);
+  color: var(--accent);
+}
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25D366;
+  color: white;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 28px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  z-index: 999;
+  transition: transform 0.3s ease;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+}
+
+.testimonial {
+  font-style: italic;
+  font-size: 1em;
+  padding: 20px;
+  border-left: 5px solid var(--secondary);
+  background: #fffef8;
+  border-radius: 10px;
+}
+
+form textarea, form input {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1em;
+  background: #fffefc;
+}
+
+form button {
+  margin-top: 15px;
+  background: var(--primary);
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1em;
+  transition: background 0.3s ease;
+}
+
+form button:hover {
+  background: var(--secondary);
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes fadeInUp {
+  from {opacity: 0; transform: translateY(30px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
   </style>
 </head>
 <body>
@@ -227,8 +329,8 @@
   <section id="contacto">
     <h2>Contacto</h2>
     <div class="card">
-      <p><strong>📞 Teléfono:</strong> +54 9 11 2345 6789</p>
-      <p><strong>💬 WhatsApp:</strong> +54 9 11 2345 6789</p>
+      <p><strong>📞 Teléfono:</strong> +54 9 261 265 4683</p>
+      <p><strong>💬 WhatsApp:</strong> +54 9 261 755 9059</p>
       <p><strong>📧 Email:</strong> ortizaguero.poda@gmail.com</p>
       <p><strong>📍 Zona de atención:</strong> San Nicolás de los Arroyos y alrededores</p>
     </div>
