@@ -2,15 +2,16 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ORTIZ AGUERO - Poda en altura</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
     :root {
       --primary: #2e7d32;
-      --accent: #81c784;
+      --accent: #66bb6a;
       --bg-light: #f1f8e9;
-      --text-dark: #1b1b1b;
+      --text-dark: #212121;
+      --card-bg: #ffffff;
     }
 
     * {
@@ -29,13 +30,13 @@
     header {
       background: linear-gradient(135deg, var(--primary), #1b5e20);
       color: white;
-      padding: 60px 20px;
+      padding: 80px 20px 60px;
       text-align: center;
       clip-path: ellipse(150% 100% at 50% 0%);
     }
 
     header h1 {
-      font-size: 3em;
+      font-size: 3.5em;
       margin-bottom: 10px;
     }
 
@@ -47,19 +48,21 @@
     nav {
       background: white;
       display: flex;
+      flex-wrap: wrap;
       justify-content: center;
-      padding: 10px 0;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      padding: 15px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
       position: sticky;
       top: 0;
-      z-index: 999;
+      z-index: 1000;
     }
 
     nav a {
       color: var(--primary);
+      margin: 8px 15px;
       text-decoration: none;
-      margin: 0 15px;
-      font-weight: bold;
+      font-weight: 600;
+      font-size: 1em;
       transition: color 0.3s;
     }
 
@@ -69,7 +72,7 @@
 
     section {
       padding: 60px 20px;
-      max-width: 1100px;
+      max-width: 1200px;
       margin: auto;
     }
 
@@ -77,127 +80,153 @@
       text-align: center;
       color: var(--primary);
       margin-bottom: 30px;
+      font-size: 2em;
     }
 
-    .services, .gallery {
+    .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 20px;
     }
 
-    .service-item, .gallery-item {
-      background: white;
+    .card {
+      background: var(--card-bg);
       border-radius: 12px;
       padding: 20px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-      transition: transform 0.3s ease;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
     }
 
-    .service-item:hover, .gallery-item:hover {
+    .card:hover {
       transform: translateY(-5px);
     }
 
     .gallery-item img {
       width: 100%;
+      height: 180px;
       border-radius: 10px;
-      height: 160px;
       object-fit: cover;
     }
 
-    .about, .contact {
-      background: white;
-      padding: 30px;
-      border-radius: 12px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-      margin-top: 20px;
-    }
-
-    .contact p {
-      margin-bottom: 10px;
-    }
-
     footer {
-      background: var(--primary);
+      background: #1b5e20;
       color: white;
       text-align: center;
-      padding: 20px;
+      padding: 30px 15px;
       font-size: 0.9em;
     }
 
     .whatsapp-float {
       position: fixed;
-      bottom: 25px;
-      right: 25px;
+      bottom: 20px;
+      right: 20px;
       background: #25D366;
       color: white;
       border-radius: 50%;
-      width: 65px;
-      height: 65px;
+      width: 60px;
+      height: 60px;
       display: flex;
       justify-content: center;
       align-items: center;
-      font-size: 30px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+      font-size: 28px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
       z-index: 999;
-      transition: background 0.3s;
     }
 
-    .whatsapp-float:hover {
-      background: #1ebe5b;
+    .testimonial {
+      font-style: italic;
+      font-size: 0.95em;
+      padding: 15px;
+      border-left: 4px solid var(--accent);
     }
 
-    @media (max-width: 768px) {
-      header h1 {
-        font-size: 2.2em;
-      }
+    form textarea, form input {
+      width: 100%;
+      padding: 12px;
+      margin-top: 10px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+
+    form button {
+      margin-top: 10px;
+      background: var(--primary);
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .social-icons a {
+      color: white;
+      margin: 0 10px;
+      font-size: 1.2em;
     }
   </style>
 </head>
 <body>
-
   <header>
     <h1>ORTIZ AGUERO</h1>
-    <p>Expertos en Poda en Altura y Mantenimiento de Árboles</p>
+    <p>Poda en Altura Profesional con Pasión por la Naturaleza</p>
   </header>
 
   <nav>
     <a href="#servicios">Servicios</a>
     <a href="#galeria">Galería</a>
-    <a href="#nosotros">Sobre Nosotros</a>
+    <a href="#nosotros">Nosotros</a>
+    <a href="#opiniones">Opiniones</a>
     <a href="#contacto">Contacto</a>
   </nav>
 
   <section id="servicios">
-    <h2>Nuestros Servicios</h2>
-    <div class="services">
-      <div class="service-item">🌳 Poda en altura</div>
-      <div class="service-item">🪓 Tala controlada</div>
-      <div class="service-item">🍂 Retiro de residuos verdes</div>
-      <div class="service-item">🌿 Mantenimiento de espacios verdes</div>
-      <div class="service-item">📋 Asesoramiento técnico</div>
+    <h2>Servicios</h2>
+    <div class="grid">
+      <div class="card">🌳 Poda en altura segura y profesional</div>
+      <div class="card">🪓 Tala controlada de árboles en riesgo</div>
+      <div class="card">🍂 Retiro rápido de residuos verdes</div>
+      <div class="card">🌿 Mantenimiento de espacios verdes</div>
+      <div class="card">📋 Diagnóstico técnico y asesoramiento</div>
     </div>
   </section>
 
   <section id="galeria">
     <h2>Galería de Trabajos</h2>
-    <div class="gallery">
-      <div class="gallery-item"><img src="https://source.unsplash.com/300x200/?tree" alt="Trabajo 1"></div>
-      <div class="gallery-item"><img src="https://source.unsplash.com/300x200/?landscape" alt="Trabajo 2"></div>
-      <div class="gallery-item"><img src="https://source.unsplash.com/300x200/?forest" alt="Trabajo 3"></div>
-      <div class="gallery-item"><img src="https://source.unsplash.com/300x200/?nature" alt="Trabajo 4"></div>
+    <div class="grid">
+      <div class="card gallery-item"><img src="https://source.unsplash.com/400x250/?tree-cut" alt="Poda 1"></div>
+      <div class="card gallery-item"><img src="https://source.unsplash.com/400x250/?gardening" alt="Poda 2"></div>
+      <div class="card gallery-item"><img src="https://source.unsplash.com/400x250/?forest-work" alt="Poda 3"></div>
     </div>
   </section>
 
   <section id="nosotros">
     <h2>Sobre Nosotros</h2>
-    <div class="about">
-      <p>En <strong>ORTIZ AGUERO</strong> llevamos años ofreciendo servicios de poda en altura con profesionalismo, seguridad y responsabilidad ambiental. Nuestro equipo está capacitado y equipado para realizar trabajos de alto riesgo, respetando la integridad del entorno natural.</p>
+    <div class="card">
+      <p>Con más de 15 años de experiencia, en <strong>ORTIZ AGUERO</strong> nos especializamos en el cuidado responsable y profesional de árboles en altura. Nuestro equipo está capacitado para trabajar con seguridad, rapidez y eficacia, brindando soluciones ecológicas y efectivas para nuestros clientes. Valoramos la confianza y priorizamos el respeto por el entorno natural.</p>
+    </div>
+  </section>
+
+  <section id="opiniones">
+    <h2>Lo que dicen nuestros clientes</h2>
+    <div class="grid">
+      <div class="card testimonial">“Excelente servicio y atención. Cortaron un árbol enorme en mi patio sin dejar ni una rama fuera de lugar.” – Marta G.</div>
+      <div class="card testimonial">“Muy responsables y profesionales. Los volvería a contratar sin dudar.” – Pedro L.</div>
+      <div class="card testimonial">“Un trabajo impecable, rápido y seguro. ¡Recomendadísimos!” – Lucía D.</div>
+    </div>
+    <div class="card" style="margin-top:30px">
+      <h3>¿Querés dejar tu opinión?</h3>
+      <form>
+        <input type="text" placeholder="Tu nombre" required>
+        <textarea placeholder="Tu opinión..." rows="4" required></textarea>
+        <button type="submit">Enviar opinión</button>
+      </form>
     </div>
   </section>
 
   <section id="contacto">
     <h2>Contacto</h2>
-    <div class="contact">
+    <div class="card">
       <p><strong>📞 Teléfono:</strong> +54 9 11 2345 6789</p>
       <p><strong>💬 WhatsApp:</strong> +54 9 11 2345 6789</p>
       <p><strong>📧 Email:</strong> ortizaguero.poda@gmail.com</p>
@@ -206,18 +235,16 @@
   </section>
 
   <footer>
-    &copy; 2025 ORTIZ AGUERO - Poda en altura. Todos los derechos reservados.
+    <p>&copy; 2025 ORTIZ AGUERO - Todos los derechos reservados.</p>
+    <div class="social-icons">
+      <a href="#" title="Facebook"><i class="fab fa-facebook"></i></a>
+      <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="#" title="YouTube"><i class="fab fa-youtube"></i></a>
+    </div>
   </footer>
 
-  <a
-    class="whatsapp-float"
-    href="https://wa.me/5491123456789?text=Hola,%20estoy%20interesado/a%20en%20el%20servicio%20de%20poda%20en%20altura.%20¿Podrían%20darme%20más%20información?"
-    target="_blank"
-    aria-label="WhatsApp"
-    title="Contactar por WhatsApp"
-  >
+  <a class="whatsapp-float" href="https://wa.me/5491123456789?text=Hola,%20estoy%20interesado/a%20en%20el%20servicio%20de%20poda%20en%20altura.%20¿Podrían%20darme%20más%20información?" target="_blank">
     <i class="fab fa-whatsapp"></i>
   </a>
-
 </body>
 </html>
